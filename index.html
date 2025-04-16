@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="form-container">
+    <h1>Student Registration</h1>
+    <form id="registrationForm" novalidate>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" required />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="10-digit number" required />
+
+      <label for="grade">Grade</label>
+      <select id="grade" name="grade" required>
+        <option value="">--Choose Grade--</option>
+        <option value="8">8th</option>
+        <option value="9">9th</option>
+        <option value="10">10th</option>
+        <option value="11">11th</option>
+        <option value="12">12th</option>
+      </select>
+
+      <label for="message">Additional Notes</label>
+      <textarea id="message" name="message" rows="4" placeholder="Any special instructions?"></textarea>
+
+      <label>
+        <input type="checkbox" required />
+        I confirm all information is accurate
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div id="form-message"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
